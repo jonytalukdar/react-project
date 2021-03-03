@@ -9,8 +9,8 @@ const Recipe = (props) => {
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit
+          vel modi.
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
