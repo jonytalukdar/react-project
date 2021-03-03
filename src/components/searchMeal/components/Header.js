@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
+import './header.css';
 
 const Header = () => {
   const [recipe, setRecipe] = useState([]);
@@ -28,9 +29,11 @@ const Header = () => {
         <input type="text" value={search} onChange={updateChange} />
         <button type="submit">Seacrh</button>
       </form>
-      {recipe.map((list) => (
-        <Recipe list={list}></Recipe>
-      ))}
+      <div className="header">
+        {recipe.map((list) => (
+          <Recipe list={list}></Recipe>
+        ))}
+      </div>
     </div>
   );
 };
