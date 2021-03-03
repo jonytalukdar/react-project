@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Recipe from './Recipe';
 
 const Header = () => {
   const [recipe, setRecipe] = useState([]);
@@ -15,6 +16,9 @@ const Header = () => {
         <input type="text" />
         <button type="submit">Seacrh</button>
       </form>
+      {recipe.map((list) => (
+        <Recipe></Recipe>
+      ))}
     </div>
   );
 };
