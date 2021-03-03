@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Header = () => {
-  const APP_ID = '33aef683';
-  const APP_KEY = 'e6754b9846a6dbc49dfb5c9d0d18f788';
-  const exampleRequest = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
+  const [recipe, setRecipe] = useState([]);
 
-  return <div></div>;
+  useEffect(() => {
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=b')
+      .then((response) => response.json())
+      .then((data) => setRecipe(data));
+  }, []);
+
+  return (
+    <div>
+      <form>
+        <input type="text" />
+        <button type="submit">Seacrh</button>
+      </form>
+    </div>
+  );
 };
 
 export default Header;
