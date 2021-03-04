@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Character from './component/character/Character';
 import Header from './component/header/Header';
 
 const Index = () => {
-  const [item, setItem] = useState([]);
+  const [items, setItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,9 +21,7 @@ const Index = () => {
   return (
     <div className="container">
       <Header></Header>
-      {item.map((list) => (
-        <li>{list.name}</li>
-      ))}
+      <Character isLoading={isLoading} items={items}></Character>
     </div>
   );
 };
