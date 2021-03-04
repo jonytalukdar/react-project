@@ -2,25 +2,28 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Character from './component/character/Character';
 import Header from './component/header/Header';
+import Search from './component/header/Search';
 
 const Index = () => {
   const [items, setItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const fetchItem = async () => {
       const result = await axios(
-        `https://www.breakingbadapi.com/api/characters`
+        `https://www.breakingbadapi.com/api/characters?name=${query}`
       );
       console.log(result.data);
       setItem(result.data);
       setIsLoading(false);
     };
     fetchItem();
-  }, []);
+  }, [query]);
   return (
     <div className="container">
       <Header></Header>
+      <Search getQuery={(q) => setQuery(q)}></Search>
       <Character isLoading={isLoading} items={items}></Character>
     </div>
   );
