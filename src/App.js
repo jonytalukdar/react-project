@@ -1,5 +1,5 @@
 import './App.css';
-import Index from './components/searchMeal/Index';
+import Index from './components/breakingBad/Index';
 
 function App() {
   return (
