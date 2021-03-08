@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AllMovies from './AllMovies';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +14,13 @@ const Movies = () => {
         console.log(data.results);
       });
   });
-  return <div></div>;
+  return (
+    <div>
+      {movies.map((movie) => (
+        <AllMovies></AllMovies>
+      ))}
+    </div>
+  );
 };
 
 export default Movies;
