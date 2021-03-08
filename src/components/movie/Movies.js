@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import AllMovies from './AllMovies';
 
 const Movies = () => {
@@ -15,13 +16,13 @@ const Movies = () => {
       });
   });
   return (
-    <div className="container">
+    <Container>
       <div className="row">
         {movies.map((movie) => (
           <AllMovies movie={movie}></AllMovies>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 

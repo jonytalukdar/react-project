@@ -2,10 +2,10 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 const AllMovies = ({ movie }) => {
-  //   const { id } = movie;
+  const { id } = movie;
   return (
     <div className="col-md-4">
-      <Card style={{ width: '18rem' }}>
+      <Card>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
