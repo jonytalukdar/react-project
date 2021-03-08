@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 const AllMovies = ({ movie }) => {
-  const { id } = movie;
+  const { id, name, backdrop_path } = movie;
   return (
     <div className="col-md-4 my-2">
       <Card>
