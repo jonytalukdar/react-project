@@ -14,7 +14,7 @@ const Movies = () => {
         setMovies(data.results);
         console.log(data.results);
       });
-  });
+  }, []);
   return (
     <Container>
       <div className="row">
