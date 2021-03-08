@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AllMovies = ({ movie }) => {
   const { id, title, backdrop_path } = movie;
@@ -12,7 +13,9 @@ const AllMovies = ({ movie }) => {
         />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Button variant="primary">Go somewhere</Button>
+          <Button as={Link} to={`/movie/${id}`} variant="primary">
+            View Details
+          </Button>
         </Card.Body>
       </Card>
     </div>
