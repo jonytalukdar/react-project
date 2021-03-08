@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 const AllMovies = ({ movie }) => {
   const { id } = movie;
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 my-2">
       <Card>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
