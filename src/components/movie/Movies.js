@@ -15,10 +15,12 @@ const Movies = () => {
       });
   });
   return (
-    <div>
-      {movies.map((movie) => (
-        <AllMovies></AllMovies>
-      ))}
+    <div className="container">
+      <div className="row">
+        {movies.map((movie) => (
+          <AllMovies movie={movie}></AllMovies>
+        ))}
+      </div>
     </div>
   );
 };
