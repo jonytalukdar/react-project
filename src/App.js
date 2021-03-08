@@ -1,5 +1,5 @@
 import './App.css';
-import Index from './components/breakingBad/Index';
+import Index from './components/movie/Index';
 
 function App() {
   return (
